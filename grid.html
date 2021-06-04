@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+<style>
+.items{
+    background-color: #f4f4f4;
+    padding: 3rem;
+    border:#ccc 1px solid;
+    font-size: 1.3rem;
+    font-weight:900;
+    text-align: center;
+}
+.grid{
+    background: red;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: 3fr 4fr;
+    grid-auto-rows:5fr;
+    /* grid-auto-columns: 200px; */
+    grid-gap: 1rem;
+    
+}
+#item9{
+    background: pink;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#item9 p{
+    padding:2rem;
+}
+
+.items:nth-child(9){
+    background: powderblue;
+    grid-column-start:2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.items:nth-child(13){
+    grid-row: 3 / span 1;
+    grid-column:2 / span 1;
+    
+}
+</style>
+
+<body>
+
+    <div class="grid">
+        <div class="items">Items 1</div>
+        <div class="items">Items 2</div>
+        <div class="items">Items 3</div>
+        <div class="items">Items 4</div>
+        <div class="items">Items 5</div>
+        <div class="items">Items 6</div>
+        <div class="items">Items 7</div>
+        <div class="items">Items 8</div>
+        <div id="item9" class="items"><p> hi</p>            <p>hello</p>
+        </div>
+        <div class="items">Items 10</div>
+        <div class="items">Items 11</div>
+        <div class="items">Items 12</div>
+        <div class="items">Items 13</div>
+        <div class="items">Items 14</div>
+        <div class="items">Items 15</div>
+
+    </div>
+    
+</body>
+</html>

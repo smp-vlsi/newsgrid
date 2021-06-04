@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>two grids</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-areas: 'item1 item1 item2';
+            /* 'item1 item1'; */
+            grid-gap:1rem;
+        }
+        .item1{
+            grid-area:item1;
+            grid-row:1 / span 10;
+            border:solid purple 1px;
+            background: pink;
+        }
+        .item2{
+            grid-area:item2;
+            grid-row:1 / span 3;
+            background: red;
+            border:solid purple 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item1">Item 1</div>
+        <div class="item2">Item 2</div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-temparea</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-areas: "header header header"
+            "content content sidebar"
+            "box1 box2 box3""footer footer footer";
+            grid-gap:1rem;
+        }
+        .header,.content,.sidebar,.box1,.box2,.box3,footer{
+            border:solid 1px #333;
+        }
+        .header{
+            grid-area: header;
+        }
+        .content{
+            grid-area: content;
+        }
+        .sidebar{
+            grid-area: sidebar;
+        }
+        .box1{
+            grid-area: box1;
+        }
+        .box2{
+            grid-area: box2;
+        }
+        .box3{
+            grid-area: box3;
+        }
+        .footer{
+            grid-area:footer;
+        }
+
+        @media(max-width:500px){
+            .container{
+                grid-template-areas: 'header''content''sidebar''box1''box2''box3''footer';
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Welcome To My Website</h1>
+        
+        </header>
+        <section class="content">
+                <h2>Main content</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur voluptatibus cupiditate eveniet excepturi aperiam dolor quo cumque praesentium tempore. Facere, in asperiores. Deleniti similique modi, voluptatem eaque veniam dolorem unde.</p>
+
+            
+
+         </section>
+         <aside class="sidebar">
+             <h2>Contact Us</h2>
+             <ul>
+                 <li>rambling hils dr</li>
+                 <li>Morrisville</li>
+             </ul>
+         </aside>
+
+         <div class="box1">
+             <h3>Heading1</h3>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cumque natus accusantium dicta odio iure quo cupiditate iusto veniam mollitia?</p>
+         </div>
+         <div class="box2">
+            <h3>Heading2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cumque natus accusantium dicta odio iure quo cupiditate iusto veniam mollitia?</p>
+        </div>
+        <div class="box3">
+            <h3>Heading3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cumque natus accusantium dicta odio iure quo cupiditate iusto veniam mollitia?</p>
+        </div>
+        <footer class="footer">
+            <p>&copy;corpyrights 2021</p>
+        </footer>
+            
+
+
+
+    </div>
+</body>
+</html>
+
+
